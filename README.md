@@ -1,6 +1,6 @@
 ## leetcode 练习题
 
-###　当前完成目录 
+### 当前完成目录 
 - [x] 4. Median of Two Sorted Arrays
 
 ### TODO
