@@ -14,33 +14,23 @@ const findMedianSortedArrays = function (nums1, nums2) {
   const
     arr = []
 
-  // function pushLowValue(i, k, nums1, nums2, arr) {
-  //   if (nums1[i] <= nums2[k]) {
-  //     arr.push(typeof nums1[i] === 'number' ? nums1[i++] : nums2[k++])
-  //   } else {
-  //     arr.push(typeof nums2[k] === 'number' ? nums2[k++] : nums1[i++])
-  //   }
-  // }
+  function pushLowValue(i, k, nums1, nums2, arr) {
+    if (nums1[i] <= nums2[k]) {
+      arr.push(typeof nums1[i] === 'number' ? nums1[i++] : nums2[k++])
+    } else {
+      arr.push(typeof nums2[k] === 'number' ? nums2[k++] : nums1[i++])
+    }
+
+    return [i, k]
+  }
 
   while (arr.length < len) {
-    if (nums1[i] <= nums2[k]) {
-      arr.push(typeof nums1[i] === 'number' ? nums1[i++] : nums2[k++])
-    } else {
-      arr.push(typeof nums2[k] === 'number' ? nums2[k++] : nums1[i++])
-    }
+    [i, k] = pushLowValue(i, k, nums1, nums2, arr)
   }
-  console.log(arr, i, k)
   if (arr.length === len) {
-    if (nums1[i] <= nums2[k]) {
-      arr.push(typeof nums1[i] === 'number' ? nums1[i++] : nums2[k++])
-    } else {
-      arr.push(typeof nums2[k] === 'number' ? nums2[k++] : nums1[i++])
-    }
+    [i, k] = pushLowValue(i, k, nums1, nums2, arr)
   } else {
-    const 
-      coverage = arr[arr.length - 1]
-
-    arr.push(coverage, coverage)
+    arr.push(arr[arr.length - 1])
   }
   
   const 
@@ -49,6 +39,10 @@ const findMedianSortedArrays = function (nums1, nums2) {
   return parseFloat((arr[arrLen - 2] + arr[arrLen - 1]) / 2)
 };
 
+/**
+ * 测试用例
+ * 正确答案应该是40
+ */
 const 
   nums1 = [1,39,40,40],
   nums2 = [2,40,50],
