@@ -7,19 +7,19 @@
  * @param {number} target
  * @return {number}
  */
-var search = function(nums, target) {
+var search = function (nums, target) {
   const len = nums.length - 1
   let index = 0
 
   if (len !== 0) {
-    if (nums[0] < target) {
-      while(nums[index] < target && nums[index] < nums[0]) {
+    if (nums[0] > target) {
+      while (nums[index] > target && nums[index] <= nums[0]) {
         index = index === 0 ? len : (index - 1)
       }
-    } 
+    }
     else {
-      while(nums[index] > target && nums[index] > nums[0]) {
-        index = index === len ? 0 : (index + 1)
+      while (typeof nums[index] === 'number' && nums[index] < target && nums[index] >= nums[0]) {
+        index++
       }
     }
 
@@ -29,8 +29,8 @@ var search = function(nums, target) {
 };
 
 const
-  nums = [1,3],
-  target = 3,
+  nums = [3, 1],
+  target = 0,
   res = search(nums, target)
 
 console.log('-----------------', res)
