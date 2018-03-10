@@ -12,20 +12,24 @@ var search = function(nums, target) {
   let index = 0
 
   if (len !== 0) {
-    while(nums[index] < target && (nums[index] < nums[0] || index === 0)) {
-      index = index === 0 ? len : (index - 1)
+    if (nums[0] < target) {
+      while(nums[index] < target && nums[index] < nums[0]) {
+        index = index === 0 ? len : (index - 1)
+      }
+    } 
+    else {
+      while(nums[index] > target && nums[index] > nums[0]) {
+        index = index === len ? 0 : (index + 1)
+      }
     }
 
-    while(nums[index] > target && nums[index] >= nums[0]) {
-      index = index === len ? 0 : (index + 1)
-    }
   }
 
   return nums[index] === target ? index : -1
 };
 
 const
-  nums = [3,4,5,1,2],
+  nums = [1,3],
   target = 3,
   res = search(nums, target)
 
