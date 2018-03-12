@@ -22,7 +22,6 @@ var search = function (nums, target) {
         index++
       }
     }
-
   }
 
   return nums[index] === target ? index : -1
