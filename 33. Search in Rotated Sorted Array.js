@@ -8,20 +8,24 @@
  * @return {number}
  */
 var search = function (nums, target) {
-  const len = nums.length - 1
+  const len = nums.length
   let index = 0
 
-  if (len !== 0) {
+  if (len !== 1 && nums[0] !== target) {
     if (nums[0] > target) {
-      while (nums[index] > target && nums[index] <= nums[0]) {
-        index = index === 0 ? len : (index - 1)
+      index = len - 1
+      while (nums[index] > target) {
+        if (index === 1) break
+        index--
       }
-    }
-    else {
-      while (typeof nums[index] === 'number' && nums[index] < target && nums[index] >= nums[0]) {
+    } else {
+      index++
+      while (nums[index] < target) {
+        if (index === len - 1) break
         index++
       }
     }
+
   }
 
   return nums[index] === target ? index : -1
