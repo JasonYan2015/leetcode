@@ -2,6 +2,7 @@
 
 ### 当前完成目录 
 - [x] 4. Median of Two Sorted Arrays
+- [ ] 10. Regular Expression Matching
 - [x] 16. 16. 3Sum Closest
 - [x] 26. Remove Duplicates from Sorted Array
 - [x] 27. Remove Element
