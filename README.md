@@ -1,6 +1,9 @@
 ## leetcode 练习题
 
-### 当前完成目录 
+### 当前完成目录
+
+- [x] 1. Two Sum
+- [x] 3. Longest Substring Without Repeating Characters
 - [x] 4. Median of Two Sorted Arrays
 - [ ] 10. Regular Expression Matching
 - [x] 16. 16. 3Sum Closest
