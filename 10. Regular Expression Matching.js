@@ -16,7 +16,7 @@ const isMatch = function (s, p) {
   for (; index < arr.length; index++) {
     const val = arr[index]
 
-    if (val === exArr[exIndex] || exArr[exIndex] || exArr[exIndex + 1] === '*') {
+    if (val === exArr[exIndex] || exArr[exIndex] === '.' || exArr[exIndex + 1] === '*') {
       exIndex += exArr[exIndex + 1] === '*' ? 2 : 1
     } else {
       break
