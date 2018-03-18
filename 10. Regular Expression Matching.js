@@ -27,7 +27,7 @@ const isMatch = function (s, p) {
     .slice(exIndex)
     .join('')
     .split('*')
-    .every(val => val.length === 1)
+    .every(val => val.length <= 1)
 
   return index === arr.length && lastExFlag
 };
