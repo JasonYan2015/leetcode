@@ -6,6 +6,7 @@
 - [x] 3. Longest Substring Without Repeating Characters
 - [x] 4. Median of Two Sorted Arrays
 - [x] 7. Reverse Integer
+- [x] 9. Palindrome Number
 - [ ] 10. Regular Expression Matching
 - [x] 11. Container With Most Water
 - [x] 16. 3Sum Closest
