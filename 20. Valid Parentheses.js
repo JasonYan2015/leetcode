@@ -5,27 +5,25 @@
  * @return {boolean}
  */
 const isValid = function (s) {
-  const
-    pairs = {
-      '(': ')',
-      '{': '}',
-      '[': ']'
-    }
+  const mission = ['()', '[]', '{}']
 
-  function findValid(str) {
-    const rightIndex = str.indexOf(pairs[str.charAt(0)])
-
-    if (rightIndex === 1) return str.length === 2 ? true : findValid(str.slice(2))
-    else if (rightIndex < 0 || (rightIndex > 1 && str.slice(1, rightIndex).length % 2 === 1)) return false
-
-    return findValid(str.slice(1, rightIndex))
+  function replaceBrackets(mission, target) {
+    mission.map(value => {
+      while (s.length > 0 && s.length % 2 === 0 && s.indexOf(value) >= 0) {
+        s = target.replace(value, '')
+        replaceBrackets(mission, s)
+        break
+      }
+    })
   }
 
-  return s.length === 0 ? true : findValid(s)
+  replaceBrackets(mission, s)
+
+  return s.length > 0 ? false : true
 }
 
 const
-  s = "(([]){})",
+  s = "[{]}",
   res = isValid(s)
 
 console.log('---------------', res)
