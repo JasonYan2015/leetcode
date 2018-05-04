@@ -13,7 +13,7 @@
 - [x] 16. 3Sum Closest
 - [x] 17. Letter Combinations of a Phone Number
 - [x] 19. Remove Nth Node From End of List
-- [] 20. Valid Parentheses
+- [x] 20. Valid Parentheses
 - [x] 21. Merge Two Sorted Lists
 - [x] 24. Swap Nodes in Pairs
 - [x] 26. Remove Duplicates from Sorted Array
