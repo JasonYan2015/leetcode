@@ -18,11 +18,33 @@
  * @return {number}
  */
 const searchInsert = function(nums, target) {
-  let index = nums.length
-  if(index < 1) return 0
+  let
+    l = 0,
+    r = nums.length - 1
 
-  while(target !== nums[index]) {
-    index = Math.floor(index / 2)
+  if (r < 0) return 0
+
+  function toFind(index) {
+    if (target === nums[index]) return index
+    if (l > r) return index + 1
+
+    if (target > nums[index]) {
+      l = index + 1
+    } 
+    else if (target < nums[index]) {
+      r = index - 1
+      if (r < 0) return 0
+    }
+
+    return toFind(Math.floor((l + r) / 2))
   }
 
+  return toFind(Math.floor((l + r) / 2))
 };
+
+const
+  nums = [9],
+  target = 7,
+  res = searchInsert(nums, target)
+
+console.log('result = ', res)
