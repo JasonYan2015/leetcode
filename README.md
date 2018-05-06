@@ -7,7 +7,7 @@
 - [x] 4. Median of Two Sorted Arrays
 - [x] 7. Reverse Integer
 - [x] 9. Palindrome Number
-- [] 10. Regular Expression Matching
+- [ ] 10. Regular Expression Matching
 - [x] 11. Container With Most Water
 - [x] 13. Roman to Integer
 - [x] 16. 3Sum Closest
@@ -19,4 +19,4 @@
 - [x] 26. Remove Duplicates from Sorted Array
 - [x] 27. Remove Element
 - [x] 33. Search in Rotated Sorted Array
-- [] 35. Search Insert Position
+- [x] 35. Search Insert Position
