@@ -7,38 +7,29 @@
  * @return {number}
  */
 const divide = function(dividend, divisor) {
+  // 分母为０，结果为０
   if (dividend === 0) return 0
+  // 溢出情况，由题意，只有此时会溢出
+  if (dividend === -Math.pow(2, 31) && divisor === -1) return Math.pow(2, 31) - 1
 
   const
-    MAX = Math.pow(2,31) - 1,
-    MIN = -Math.pow(2,31),
     newDivisor = Math.abs(divisor)
   
   let 
     num = Math.abs(dividend),
-    res = -1
-  
-  if (newDivisor === 1) {
-    res = dividend
-  }
+    res = newDivisor === 1　? Math.abs(dividend) : -1
 
-  while(num >= 0 && newDivisor !== 1 && res <= MAX && res >= MIN) {
+  while(num >= 0 && newDivisor !== 1) {
     num -= newDivisor
     res++
   }
-
-  res = res > MAX || res < MIN
-        ?
-          MAX
-          :
-          res
 
   return Math.abs(dividend - divisor) > Math.abs(dividend) ? -res : res
 };
 
 const
-  dividend = -2147483648,
-  divisor = -1,
+  dividend = -10,
+  divisor = 3,
   res = divide(dividend, divisor)
 
 console.log('res: -------------------', res)
