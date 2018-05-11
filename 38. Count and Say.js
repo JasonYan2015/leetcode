@@ -16,5 +16,35 @@
  * @return {string}
  */
 const countAndSay = function(n) {
-    
+  let
+    num = '1',
+    times = n,
+    counter = []
+
+  while(times > 1) {
+    `${num}`.split('').map(val => {
+      const lastIndex = counter.length - 1
+      if(counter[lastIndex] && counter[lastIndex].val === val) {
+        counter[lastIndex].count++
+      }
+      else {
+        counter.push({
+          count: 1,
+          val
+        })
+      }
+    })
+
+    num = counter.map(obj => `${obj.count}${obj.val}`).join('')
+    counter = []
+    times--
+  }
+
+  return num
 };
+
+const
+  n = 1,
+  res = countAndSay(n)
+
+console.log('res: --------------------', res)
