@@ -21,4 +21,4 @@
 - [ ] 29. Divide Two Integers
 - [x] 33. Search in Rotated Sorted Array
 - [x] 35. Search Insert Position
-- [ ] 38. Count and Say
+- [x] 38. Count and Say
