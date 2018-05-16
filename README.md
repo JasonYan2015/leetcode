@@ -19,6 +19,7 @@
 - [x] 24. Swap Nodes in Pairs
 - [x] 26. Remove Duplicates from Sorted Array
 - [x] 27. Remove Element
+- [ ] 28. Implement strStr()
 - [ ] 29. Divide Two Integers
 - [x] 33. Search in Rotated Sorted Array
 - [x] 35. Search Insert Position
