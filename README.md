@@ -7,7 +7,7 @@
 - [x] 4. Median of Two Sorted Arrays
 - [x] 7. Reverse Integer
 - [x] 9. Palindrome Number
-- [ ] 10. Regular Expression Matching
+- [x] 10. Regular Expression Matching
 - [x] 11. Container With Most Water
 - [x] 13. Roman to Integer
 - [x] 14. Longest Common Prefix
