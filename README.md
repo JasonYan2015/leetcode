@@ -16,6 +16,7 @@
 - [x] 19. Remove Nth Node From End of List
 - [x] 20. Valid Parentheses
 - [x] 21. Merge Two Sorted Lists
+- [x] 22. Generate Parentheses
 - [x] 24. Swap Nodes in Pairs
 - [x] 26. Remove Duplicates from Sorted Array
 - [x] 27. Remove Element
